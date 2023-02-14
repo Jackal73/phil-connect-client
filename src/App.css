@@ -1,0 +1,109 @@
+.default-layout {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.defaultLayout::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+  overflow: auto;
+}
+
+main::after {
+  content: "";
+  background: url(./assets/img/freedom-bg1.jpg) top center no-repeat black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  opacity: 0.09;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #0f0e13;
+  background-image: radial-gradient(
+      at 100% 60%,
+      hsla(339, 49%, 30%, 1) 0,
+      transparent 53%
+    ),
+    radial-gradient(at 60% 30%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(253, 16%, 7%, 1) 0, transparent 50%);
+  padding: 0.75rem;
+  color: #fff;
+}
+
+.breadcrumb > .active a {
+  font-weight: 500;
+  color: hsl(339, 49%, 30%) !important;
+}
+
+.breadcrumb a {
+  font-weight: 500 !important;
+  color: hsl(339, 49%, 30%) !important;
+}
+
+.breadcrumb,
+.soft-back {
+  background-color: rgba(0, 0, 80, 0.05) !important;
+  padding-top: 0.75rem !important;
+  padding-right: 1rem !important;
+  padding-bottom: 0.75rem !important;
+  padding-left: 1rem !important;
+}
+
+.hard-back {
+  background-color: #0f0e13 !important;
+  background-image: radial-gradient(
+      at 0% 30%,
+      hsla(339, 49%, 30%, 1) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 30% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%);
+}
+
+.jumbotron {
+  padding-top: 1.5rem !important;
+  padding-bottom: 2rem !important;
+  background-color: rgba(0, 0, 80, 0.05) !important;
+}
+
+.jumbotron-1 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+textarea.form-control {
+  padding: 0 !important;
+  margin: 0 1rem !important;
+  border: 1px dotted hsl(339, 49%, 30%) !important;
+  border-radius: 10px !important;
+  font-size: 1.2rem !important;
+  background: transparent !important;
+}
