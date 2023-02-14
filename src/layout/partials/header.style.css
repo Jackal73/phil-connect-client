@@ -1,0 +1,42 @@
+.freedom-grad {
+  border: 1px solid rgba(13, 30, 49, 1) !important;
+  background: hsla(212, 58%, 12%, 1);
+  background: linear-gradient(
+    360deg,
+    hsla(212, 58%, 12%, 1) 30%,
+    hsla(217, 100%, 50%, 1) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0D1E31", endColorstr="#0061ff", GradientType=1 );
+}
+
+.margin-t-entry {
+  margin-right: -1rem !important;
+}
+
+.brand {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem !important;
+  text-decoration: none;
+}
+
+.brand1 {
+  display: hidden;
+}
+
+.headerNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center !important;
+  padding: 1rem 2rem;
+  border: 1px solid hsl(339, 49%, 30%) !important;
+
+  background-color: #0f0e13;
+  background-image: radial-gradient(
+      at 0% 30%,
+      hsla(339, 49%, 30%, 1) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 30% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%);
+}

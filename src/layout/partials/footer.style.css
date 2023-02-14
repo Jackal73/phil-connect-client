@@ -1,0 +1,38 @@
+.footer a {
+  background-image: hsl(210, 100%, 25%);
+  background-image: linear-gradient(
+    350deg,
+    hsla(0, 0%, 100%, 1) 5%,
+    hsla(217, 100%, 50%, 1) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#0061FF", GradientType=1 );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 3px !important;
+  background-color: rgb(12, 11, 11) !important;
+  border-radius: 10px !important;
+  box-shadow: 4px 3px 5px 2px hsla(217, 100%, 50%, 1);
+  margin-right: 2px;
+  padding: 0px 1px 2px 1px !important;
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000090", endColorstr="#983FCC", GradientType=1 );
+}
+
+.footer a:hover {
+  box-shadow: 1px 1px 1px 0px hsla(217, 100%, 50%, 1);
+  color: hsla(217, 100%, 50%, 1) !important;
+  text-decoration: none !important;
+  padding-left: 0px;
+  background-image: hsla(217, 100%, 50%, 1) !important;
+  background-image: linear-gradient(
+    345deg,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(217, 100%, 50%, 1) 0%
+  );
+}
+
+.cursor {
+  cursor: pointer !important;
+}
