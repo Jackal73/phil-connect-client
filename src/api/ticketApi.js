@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// const rootUrl = "";
-const rootUrl = "http://localhost:3001/v1/";
+const rootUrl = "https://phil-connect-api.adaptable.app/v1/";
+// const rootUrl = "http://localhost:3001/v1/";
 
 const ticketUrl = rootUrl + "ticket/";
 const ticketUrlAll = rootUrl + "ticket/1/";

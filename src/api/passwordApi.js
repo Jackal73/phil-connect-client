@@ -1,7 +1,8 @@
 import axios from "axios";
 
-// const rootUrl = "";
-const rootUrl = "http://localhost:3001/v1/";
+const rootUrl = "https://phil-connect-api.adaptable.app/v1/";
+// const rootUrl = "http://localhost:3001/v1/";
+
 const otpReqUrl = rootUrl + "user/reset-password";
 const updatePassUrl = rootUrl + "user/reset-password";
 
