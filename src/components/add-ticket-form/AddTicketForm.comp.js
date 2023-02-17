@@ -16,7 +16,7 @@ import { resetSuccessMsg } from "./addTicketSlicer";
 
 const initialFrmData = {
   // clientId: '',
-  dateOrdered: "",
+  dateOrdered: new Date().toLocaleDateString(),
   orderedBy: "",
   recipient: "",
   address: "",
@@ -192,7 +192,7 @@ export const AddTicketForm = () => {
             Ordered
           </Form.Label>
           <Col sm={4}>
-            <Form.Control
+            {/* <Form.Control
               name="orderedBy"
               value={frmData.orderedBy}
               maxLength="20"
@@ -200,7 +200,36 @@ export const AddTicketForm = () => {
               placeholder="Ordered By"
               required
               className="shado mt-1"
-            />
+            /> */}
+            <div>
+              <select
+                className="shado select"
+                defaultValue=""
+                name="orderedBy"
+                required
+                onChange={(e) => handleOnChange(e)}
+              >
+                <option value="" disabled hidden className=""></option>
+                <option value="ALICIA">ALICIA</option>
+                <option value="AMANDA">AMANDA</option>
+                <option value="BRE">BRE</option>
+                <option value="DEBBIE">DEBBIE</option>
+                <option value="DELANEY">DELANEY</option>
+                <option value="ERIN">ERIN</option>
+                <option value="JESSICA">JESSICA</option>
+                <option value="KADI">KADI</option>
+                <option value="KIMBERLY">KIMBERLY</option>
+                <option value="KRISTIN">KRISTIN</option>
+                <option value="MELISSA">MELISSA</option>
+                <option value="MICHELLE">MICHELLE</option>
+                <option value="NICHOLE">NICHOLE</option>
+                <option value="REBECCA">REBECCA</option>
+                <option value="ROBYN">ROBYN</option>
+                <option value="STEPHANIE">STEPHANIE</option>
+                <option value="SUZY">SUZY</option>
+                <option value="TERI">TERI</option>
+              </select>
+            </div>
             <Form.Text className="text-danger center">
               {!frmData.orderedBy && "Ordered By is required"}
             </Form.Text>
@@ -210,7 +239,7 @@ export const AddTicketForm = () => {
             Recipient
           </Form.Label>
           <Col sm={4}>
-            <Form.Control
+            {/* <Form.Control
               name="recipient"
               value={frmData.recipient}
               maxLength="20"
@@ -218,7 +247,36 @@ export const AddTicketForm = () => {
               placeholder="Recipient"
               required
               className="shado mt-1"
-            />
+            /> */}
+            <div>
+              <select
+                className="shado select"
+                defaultValue=""
+                name="recipient"
+                required
+                onChange={(e) => handleOnChange(e)}
+              >
+                <option value="" disabled hidden className=""></option>
+                <option value="ALICIA">ALICIA</option>
+                <option value="AMANDA">AMANDA</option>
+                <option value="BRE">BRE</option>
+                <option value="DEBBIE">DEBBIE</option>
+                <option value="DELANEY">DELANEY</option>
+                <option value="ERIN">ERIN</option>
+                <option value="JESSICA">JESSICA</option>
+                <option value="KADI">KADI</option>
+                <option value="KIMBERLY">KIMBERLY</option>
+                <option value="KRISTIN">KRISTIN</option>
+                <option value="MELISSA">MELISSA</option>
+                <option value="MICHELLE">MICHELLE</option>
+                <option value="NICHOLE">NICHOLE</option>
+                <option value="REBECCA">REBECCA</option>
+                <option value="ROBYN">ROBYN</option>
+                <option value="STEPHANIE">STEPHANIE</option>
+                <option value="SUZY">SUZY</option>
+                <option value="TERI">TERI</option>
+              </select>
+            </div>
             <Form.Text className="text-danger center">
               {!frmData.recipient && "Recipient is required"}
             </Form.Text>
