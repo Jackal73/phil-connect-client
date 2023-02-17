@@ -192,15 +192,6 @@ export const AddTicketForm = () => {
             Ordered
           </Form.Label>
           <Col sm={4}>
-            {/* <Form.Control
-              name="orderedBy"
-              value={frmData.orderedBy}
-              maxLength="20"
-              onChange={handleOnChange}
-              placeholder="Ordered By"
-              required
-              className="shado mt-1"
-            /> */}
             <div>
               <select
                 className="shado select"
@@ -230,6 +221,15 @@ export const AddTicketForm = () => {
                 <option value="TERI">TERI</option>
               </select>
             </div>
+            <Form.Control
+              name="orderedBy"
+              value={frmData.orderedBy}
+              maxLength="20"
+              onChange={handleOnChange}
+              placeholder="Ordered By"
+              required
+              className="shado mt-1"
+            />
             <Form.Text className="text-danger center">
               {!frmData.orderedBy && "Ordered By is required"}
             </Form.Text>
@@ -239,16 +239,7 @@ export const AddTicketForm = () => {
             Recipient
           </Form.Label>
           <Col sm={4}>
-            {/* <Form.Control
-              name="recipient"
-              value={frmData.recipient}
-              maxLength="20"
-              onChange={handleOnChange}
-              placeholder="Recipient"
-              required
-              className="shado mt-1"
-            /> */}
-            <div>
+            {/* <div>
               <select
                 className="shado select"
                 defaultValue=""
@@ -276,7 +267,16 @@ export const AddTicketForm = () => {
                 <option value="SUZY">SUZY</option>
                 <option value="TERI">TERI</option>
               </select>
-            </div>
+            </div> */}
+            <Form.Control
+              name="recipient"
+              value={frmData.recipient}
+              maxLength="20"
+              onChange={handleOnChange}
+              placeholder="Recipient"
+              required
+              className="shado mt-1"
+            />
             <Form.Text className="text-danger center">
               {!frmData.recipient && "Recipient is required"}
             </Form.Text>
