@@ -288,6 +288,26 @@ export const AddTicketForm = () => {
             Recipient Location
           </Form.Label>
           <Col sm={4}>
+            <div>
+              <select
+                className="shado bold4 mb-2"
+                defaultValue=""
+                // placeholder="Recipient Address"
+                name="zipCode"
+                required
+                onChange={(e) => handleOnChange(e)}
+              >
+                <option className="" value="ENTRY">
+                  "NEW ENTRY"
+                </option>
+                <option value="Festus">Festus</option>
+                <option value="Hazelwood">Hazelwood</option>
+                <option value="Kirkwood">Kirkwood</option>
+                <option value="St. Peters">St. Peters</option>
+                <option value="Telegraph">Telegraph</option>
+                <option value=""></option>
+              </select>
+            </div>
             <Form.Control
               name="zipCode"
               value={frmData.zipCode}
@@ -311,6 +331,7 @@ export const AddTicketForm = () => {
               <select
                 className="shado bold4 mb-2"
                 defaultValue=""
+                // placeholder="Recipient Address"
                 name="address"
                 required
                 onChange={(e) => handleOnChange(e)}
@@ -318,8 +339,12 @@ export const AddTicketForm = () => {
                 <option className="" value="ENTRY">
                   "NEW ENTRY"
                 </option>
-                <option value="ALL">ALL</option>
-                <option value="AL">AL</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
               </select>
             </div>
             <Form.Control
