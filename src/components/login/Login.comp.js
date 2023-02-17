@@ -14,6 +14,7 @@ import { useHistory } from "react-router-dom";
 import { userLogin } from "../../api/userApi";
 import { loginPending, loginFail, loginSuccess } from "./loginSlice";
 import { getUserProfile } from "../../pages/dashboard/userAction";
+import "./login.style.css";
 
 export const LoginForm = ({ formSwitcher }) => {
   const dispatch = useDispatch();

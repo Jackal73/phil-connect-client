@@ -11,6 +11,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 
 import { newUserRegistration } from "./userRegAction";
+import "./registrationForm.style.css";
 
 const initialState = {
   name: "",

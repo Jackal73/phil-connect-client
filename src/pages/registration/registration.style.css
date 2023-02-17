@@ -13,3 +13,7 @@
   padding-bottom: 2rem !important;
   background-color: rgba(255, 255, 255, 0.9) !important;
 }
+
+.norm {
+  text-transform: none !important;
+}

@@ -265,6 +265,9 @@ export const Ticket = ({ tickets }) => {
                   />
                 </Col>
               </Form.Group>
+              <div>
+                {replyMsg && <Alert variant="success">{replyMsg}</Alert>}
+              </div>
 
               <Form.Group as={Row}>
                 <Form.Label column sm={12} className=" text-black bold7">
