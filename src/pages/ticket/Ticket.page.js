@@ -48,14 +48,13 @@ export const Ticket = ({ tickets }) => {
   dateC = new Date(dateC.getTime() + dateC.getTimezoneOffset());
   let updated = dateC.toLocaleDateString().substring(0, 10);
 
+  let dateY = new Date(selectedTicket.createdAt);
+  let adTime = dateY.toLocaleTimeString().substring(0, 10);
+  dateY = new Date(dateY.getTime() + dateY.getTimezoneOffset());
+  let adDate = dateY.toLocaleDateString().substring(0, 10);
+
   let dateE = new Date(selectedTicket.updatedAt);
   dateE = new Date(dateE.getTime() + dateE.getTimezoneOffset() * 60000);
-
-  // .substring(0, 5);
-
-  // const onButtonClickHandler = () => {
-  //   {selectedTicket.status} "connected");
-  // };
 
   return (
     <>
@@ -92,15 +91,6 @@ export const Ticket = ({ tickets }) => {
                 )}
               </Col>
 
-              {/* <Col sm={5} className="center mt-2 p-0 hidden">
-                {selectedTicket.status === "Connected" && (
-                  <h6 className="bold">
-
-                    connected: {updated}, {time}
-                  </h6>
-                )} */}
-              {/* </Col> */}
-
               <Col className=" mb-3 rgt">
                 <Link to="/ticket/edit/tid">
                   <Button
@@ -115,9 +105,6 @@ export const Ticket = ({ tickets }) => {
             </Row>
             {selectedTicket.status === "Connected" && (
               <h6 className="bold center font3x mb-3">
-                {/* connected: {selectedTicket.updatedAt.slice(5, 10)}-
-                    {selectedTicket.updatedAt.slice(0, 4)} @{" "}
-                    {selectedTicket.updatedAt.slice(11, 16)} */}
                 <span className="text-red">connected:</span> <br />
                 {updated}, {time}
               </h6>
@@ -134,7 +121,6 @@ export const Ticket = ({ tickets }) => {
                 </Form.Label>
                 <Col sm={6}>
                   <Form.Control
-                    // name="fileNo"
                     value={tId.slice(-4)}
                     className="shado mb-2"
                     readOnly
@@ -155,11 +141,11 @@ export const Ticket = ({ tickets }) => {
                   />
                 </Col>
               </Form.Group>
-              {selectedTicket.status === "Connected" && (
-                <Form.Text className=" bold rgt pr-2 text-shad-none">
-                  connected: {updated}, {time}
-                </Form.Text>
-              )}
+              <Form.Text className="bold rgt mb-3">
+                <span className="">date ordered: </span>
+                {adDate}, {adTime}
+              </Form.Text>
+
               <Form.Group as={Row}>
                 <Form.Label column sm={6} className="text-shad-none bold7">
                   Status
@@ -181,6 +167,11 @@ export const Ticket = ({ tickets }) => {
                   )}
                 </Col>
               </Form.Group>
+              {selectedTicket.status === "Connected" && (
+                <Form.Text className=" bold rgt pr-2 text-shad-none">
+                  connected: {updated}, {time}
+                </Form.Text>
+              )}
 
               <Form.Group as={Row}>
                 <Form.Label column sm={6} className="text-shad-none bold7">
@@ -207,7 +198,7 @@ export const Ticket = ({ tickets }) => {
 
               <Form.Group as={Row}>
                 <Form.Label column sm={2}>
-                  Ordered
+                  Orderer
                 </Form.Label>
                 <Col sm={4}>
                   <Form.Control
@@ -284,11 +275,6 @@ export const Ticket = ({ tickets }) => {
               </Form.Group>
 
               <Row>
-                {/* <Row>
-                  <Col>
-                    <Recipient />
-                  </Col>
-                </Row> */}
                 <Col className="text-center">
                   <Button
                     variant="danger shado bold6"

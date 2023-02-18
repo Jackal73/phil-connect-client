@@ -15,7 +15,6 @@ import { openNewTicket } from "./addTicketAction";
 import { resetSuccessMsg } from "./addTicketSlicer";
 
 const initialFrmData = {
-  // clientId: '',
   dateOrdered: new Date().toLocaleDateString(),
   orderedBy: "",
   recipient: "",
@@ -43,9 +42,6 @@ const initialFrmError = {
 
 export const AddTicketForm = () => {
   const dispatch = useDispatch();
-  // const {
-  //   user: {name},
-  // } = useSelector((state) => state.user);
 
   const { isLoading, error, successMsg } = useSelector(
     (state) => state.openTicket
@@ -189,7 +185,7 @@ export const AddTicketForm = () => {
 
         <Form.Group as={Row}>
           <Form.Label column sm={2} className="freedom-clr text-shadow">
-            Ordered
+            Orderer
           </Form.Label>
           <Col sm={4}>
             <div>
@@ -239,35 +235,6 @@ export const AddTicketForm = () => {
             Recipient
           </Form.Label>
           <Col sm={4}>
-            {/* <div>
-              <select
-                className="shado select"
-                defaultValue=""
-                name="recipient"
-                required
-                onChange={(e) => handleOnChange(e)}
-              >
-                <option value="" disabled hidden className=""></option>
-                <option value="ALICIA">ALICIA</option>
-                <option value="AMANDA">AMANDA</option>
-                <option value="BRE">BRE</option>
-                <option value="DEBBIE">DEBBIE</option>
-                <option value="DELANEY">DELANEY</option>
-                <option value="ERIN">ERIN</option>
-                <option value="JESSICA">JESSICA</option>
-                <option value="KADI">KADI</option>
-                <option value="KIMBERLY">KIMBERLY</option>
-                <option value="KRISTIN">KRISTIN</option>
-                <option value="MELISSA">MELISSA</option>
-                <option value="MICHELLE">MICHELLE</option>
-                <option value="NICHOLE">NICHOLE</option>
-                <option value="REBECCA">REBECCA</option>
-                <option value="ROBYN">ROBYN</option>
-                <option value="STEPHANIE">STEPHANIE</option>
-                <option value="SUZY">SUZY</option>
-                <option value="TERI">TERI</option>
-              </select>
-            </div> */}
             <Form.Control
               name="recipient"
               value={frmData.recipient}
@@ -292,7 +259,6 @@ export const AddTicketForm = () => {
               <select
                 className="shado bold4 mb-2"
                 defaultValue=""
-                // placeholder="Recipient Address"
                 name="zipCode"
                 required
                 onChange={(e) => handleOnChange(e)}
@@ -336,7 +302,6 @@ export const AddTicketForm = () => {
               <select
                 className="shado bold4 mb-2"
                 defaultValue=""
-                // placeholder="Recipient Address"
                 name="address"
                 required
                 onChange={(e) => handleOnChange(e)}

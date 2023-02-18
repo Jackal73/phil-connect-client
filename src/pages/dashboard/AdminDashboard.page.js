@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
+import philCar from "../../assets/img/philCar.png";
 import { SearchForm } from "../../components/search form/SearchForm.comp";
 import { TicketTable1 } from "../../components/ticket-table/TicketTable1.comp";
 import { fetchAllTickets } from "../ticket-list/ticketsAction";
-import philCar from "../../assets/img/philCar.png";
 
 export const AdminDashboard = () => {
   const dispatch = useDispatch();

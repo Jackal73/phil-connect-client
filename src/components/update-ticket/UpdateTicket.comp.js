@@ -96,6 +96,11 @@ export const UpdateTicket = ({ _id, data }) => {
 
   let dateOrdered = dateC.toLocaleDateString().substring(0, 10);
 
+  let dateY = new Date(selectedTicket.createdAt);
+  let adTime = dateY.toLocaleTimeString().substring(0, 10);
+  dateY = new Date(dateY.getTime() + dateY.getTimezoneOffset());
+  let adDate = dateY.toLocaleDateString().substring(0, 10);
+
   return (
     <Container className="prl-25">
       <Row>
@@ -179,9 +184,13 @@ export const UpdateTicket = ({ _id, data }) => {
                 />
               </Col>
             </Form.Group>
+            <Form.Text className="bold rgt mb-3">
+              <span className="">date ordered: </span>
+              {adDate}, {adTime}
+            </Form.Text>
             <Form.Group as={Row}>
               <Form.Label column sm={2} className="">
-                Ordered
+                Orderer
               </Form.Label>
               <Col sm={4}>
                 <Form.Control
