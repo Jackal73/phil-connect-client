@@ -300,11 +300,16 @@ export const AddTicketForm = () => {
                 <option className="" value="ENTRY">
                   "NEW ENTRY"
                 </option>
-                <option value="Festus">Festus</option>
-                <option value="Hazelwood">Hazelwood</option>
-                <option value="Kirkwood">Kirkwood</option>
-                <option value="St. Peters">St. Peters</option>
-                <option value="Telegraph">Telegraph</option>
+                <option value="Festus Office">FESTUS OFFICE</option>
+                <option value="Hazelwood Office">HAZELWOOD OFFICE</option>
+                <option value="Kirkwood Office">KIRKWOOD OFFICE</option>
+                <option value="MANCHESTER OFFICE">MANCHESTER OFFICE</option>
+                <option value="St. Peters Office">ST. PETERS OFFICE</option>
+                <option value="Telegraph Office">TELEGRAPH OFFICE</option>
+                <option value="Investors Title">INVESTORS TITLE</option>
+                <option value="Guild Mortgage">GUILD MORTGAGE</option>
+                <option value=""></option>
+                <option value=""></option>
                 <option value=""></option>
               </select>
             </div>
@@ -339,8 +344,12 @@ export const AddTicketForm = () => {
                 <option className="" value="ENTRY">
                   "NEW ENTRY"
                 </option>
-                <option value=""></option>
-                <option value=""></option>
+                <option value="1897 Richardson Arnold MO 63010">
+                  1897 RICHARDSON, ARNOLD MO 63010
+                </option>
+                <option value="17280 N Outer Forty Rd Suite 101">
+                  17280 N OUTER FORTY RD, SUITE 101
+                </option>
                 <option value=""></option>
                 <option value=""></option>
                 <option value=""></option>
