@@ -19,7 +19,7 @@ export const TicketTable1 = ({ tickets }) => {
         <thead>
           <tr className="hard-back text-white">
             <th className="">Request</th>
-            <td className="hidden"></td>
+            <th className="">Date</th>
             <th className="">Location</th>
             <th className="">Address</th>
             <th className="">Status</th>
@@ -32,7 +32,7 @@ export const TicketTable1 = ({ tickets }) => {
               .reverse()
               .map((row) => (
                 <tr key={row._id}>
-                  {/* {row.dateOrdered.slice(0, 10) >=
+                  {/* {row.dateOrdered.slice(0, 10) <=
                   new Date().toISOString().slice(0, 10) ? ( */}
                   <>
                     <td>
@@ -43,9 +43,9 @@ export const TicketTable1 = ({ tickets }) => {
                         {row._id.slice(-4)}
                       </Link>
                     </td>
-                    <td className="hidden">
-                      {row.dateOrdered.slice(5, 10)}-
-                      {row.dateOrdered.slice(0, 4)}
+                    <td className="">
+                      {row.dateOrdered.slice(8, 10)}
+                      {/* {row.dateOrdered.slice(0, 4)} */}
                     </td>
 
                     <td className="">{row.zipCode}</td>
@@ -64,7 +64,7 @@ export const TicketTable1 = ({ tickets }) => {
                     </td>
                   </>
                   {/* ) : ( */}
-
+                  {/* "" */}
                   {/* )} */}
                 </tr>
               ))
