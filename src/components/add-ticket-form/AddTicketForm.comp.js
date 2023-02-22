@@ -197,6 +197,9 @@ export const AddTicketForm = () => {
                 onChange={(e) => handleOnChange(e)}
               >
                 <option value="" disabled hidden className=""></option>
+                {/* <option className="" value="ENTRY">
+                  "NEW ENTRY"
+                </option> */}
                 <option value="ALICIA">ALICIA</option>
                 <option value="AMANDA">AMANDA</option>
                 <option value="BRE">BRE</option>
