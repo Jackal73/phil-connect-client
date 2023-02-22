@@ -5,6 +5,7 @@ import philCar from "../../assets/img/philCar.png";
 import { SearchForm } from "../../components/search form/SearchForm.comp";
 import { TicketTable1 } from "../../components/ticket-table/TicketTable1.comp";
 import { fetchAllTickets } from "../ticket-list/ticketsAction";
+import { SearchFormM } from "../../components/search form/SearchFormM.comp";
 
 export const AdminDashboard = () => {
   const dispatch = useDispatch();
@@ -60,9 +61,9 @@ export const AdminDashboard = () => {
           <span className="bold6 font8">{totalTickets}</span>
         </Col>
       </Row>
-      <Row>
-        <Col>
-          <SearchForm className="center" />
+      <Row className="center">
+        <Col sm={6} className="center">
+          <SearchFormM className="" />
         </Col>
       </Row>
       <Row>

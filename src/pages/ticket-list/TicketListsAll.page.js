@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { PageBreadcrumb } from "../../components/breadcrumb/Breadcrumb.comp";
 import { SearchForm } from "../../components/search form/SearchForm.comp";
+import { SearchFormM } from "../../components/search form/SearchFormM.comp";
 import { TicketTable2 } from "../../components/ticket-table/TicketTable2.comp";
 import { fetchAllTickets } from "./ticketsAction";
 import philCar from "../../assets/img/philCar.png";
@@ -52,7 +53,7 @@ export const TicketListsAll = () => {
 
       <Row className="mt-2 row-sm">
         <Col className="text-right">
-          <SearchForm />
+          <SearchFormM />
         </Col>
       </Row>
 

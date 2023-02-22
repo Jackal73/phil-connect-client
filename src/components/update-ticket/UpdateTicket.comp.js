@@ -167,7 +167,7 @@ export const UpdateTicket = ({ _id, data }) => {
             </Form.Group>
             <Form.Group as={Row}>
               <Form.Label column sm={6} className="mt-3">
-                Request Date
+                Requested Delivery Date
               </Form.Label>
               <Col sm={6}>
                 <Form.Text className="freedom-clr">{dateOrdered}</Form.Text>

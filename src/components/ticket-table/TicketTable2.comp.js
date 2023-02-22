@@ -32,7 +32,8 @@ export const TicketTable2 = ({ tickets }) => {
       <Table striped hover className="shado mt-2 border">
         <thead>
           <tr className="hard-back text-white">
-            <th className="">Request</th>
+            <th className="">Req.#</th>
+            <th className="">Date</th>
             <th className="">Location</th>
             <th className="">Address</th>
             <th className="">Status</th>
@@ -50,17 +51,21 @@ export const TicketTable2 = ({ tickets }) => {
                       {row._id.slice(-4)}
                     </Link>
                   </td>
+
+                  <td>
+                    {row.dateOrdered.slice(5, 10)}-{row.dateOrdered.slice(0, 4)}
+                  </td>
                   <td>{row.zipCode}</td>
 
                   <td className="">{row.address}</td>
                   <td className="">
                     {row.status === "Connected" ? (
                       <Button className="red bold6 mb-1 ml-2 pl-1 pr-1 pt-0 pb-0 noBorder border">
-                        Connected
+                        Conn
                       </Button>
                     ) : (
                       <Button className="green bold6 mb-1 ml-2 pl-1 pr-1 pt-0 pb-0 noBorder border">
-                        Pending
+                        Pend
                       </Button>
                     )}
                   </td>

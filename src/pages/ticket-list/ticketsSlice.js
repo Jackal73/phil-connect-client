@@ -42,7 +42,7 @@ const ticketListSlice = createSlice({
       state.searchTicketList = state.tickets.filter((row) => {
         if (!payload) return row;
 
-        return row.fundDate.toLowerCase().includes(payload);
+        return row.dateOrdered.toLowerCase().includes(payload);
       });
     },
     searchTicketsC: (state, { payload }) => {

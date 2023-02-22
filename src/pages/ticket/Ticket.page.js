@@ -129,7 +129,7 @@ export const Ticket = ({ tickets }) => {
               </Form.Group>
               <Form.Group as={Row}>
                 <Form.Label column sm={6}>
-                  Request Date
+                  Requested Delivery Date
                 </Form.Label>
                 <Col sm={6}>
                   <Form.Control
@@ -221,7 +221,7 @@ export const Ticket = ({ tickets }) => {
               </Form.Group>
 
               <Form.Group as={Row}>
-                <Form.Label column sm={8}>
+                <Form.Label column sm={4}>
                   Location
                 </Form.Label>
                 <Col sm={4}>
@@ -234,10 +234,10 @@ export const Ticket = ({ tickets }) => {
               </Form.Group>
 
               <Form.Group as={Row}>
-                <Form.Label column sm={6}>
+                <Form.Label column sm={4}>
                   Address
                 </Form.Label>
-                <Col sm={6}>
+                <Col sm={8}>
                   <Form.Control
                     value={selectedTicket.address}
                     className="shado mb-1"
@@ -245,10 +245,10 @@ export const Ticket = ({ tickets }) => {
                   />
                 </Col>
 
-                <Form.Label column sm={6} className="mt-2 bold7">
+                <Form.Label column sm={4} className="mt-2 bold7">
                   File No.
                 </Form.Label>
-                <Col sm={6}>
+                <Col sm={8}>
                   <Form.Control
                     value={selectedTicket.fileNo}
                     className="shado mt-2 text-black bold7"

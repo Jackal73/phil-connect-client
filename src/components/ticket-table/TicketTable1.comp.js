@@ -11,12 +11,15 @@ export const TicketTable1 = ({ tickets }) => {
   if (isLoading) return <h3>Loading ...</h3>;
   if (error) return <h3>{error}</h3>;
 
+  console.log(new Date().toLocaleDateString().slice(0, 10));
+
   return (
     <>
       <Table striped className="shado mt-2 border p-0 font3x">
         <thead>
           <tr className="hard-back text-white">
             <th className="">Request</th>
+            <td className="hidden"></td>
             <th className="">Location</th>
             <th className="">Address</th>
             <th className="">Status</th>
@@ -29,7 +32,8 @@ export const TicketTable1 = ({ tickets }) => {
               .reverse()
               .map((row) => (
                 <tr key={row._id}>
-                  {/* {row.status === "Pending" ? ( */}
+                  {/* {row.dateOrdered.slice(0, 10) >=
+                  new Date().toISOString().slice(0, 10) ? ( */}
                   <>
                     <td>
                       <Link
@@ -39,6 +43,11 @@ export const TicketTable1 = ({ tickets }) => {
                         {row._id.slice(-4)}
                       </Link>
                     </td>
+                    <td className="hidden">
+                      {row.dateOrdered.slice(5, 10)}-
+                      {row.dateOrdered.slice(0, 4)}
+                    </td>
+
                     <td className="">{row.zipCode}</td>
                     <td className="">{row.address}</td>
 
@@ -54,7 +63,8 @@ export const TicketTable1 = ({ tickets }) => {
                       )}
                     </td>
                   </>
-                  {/* ): (<td className="hidden"></td> */}
+                  {/* ) : ( */}
+
                   {/* )} */}
                 </tr>
               ))
