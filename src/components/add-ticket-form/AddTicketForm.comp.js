@@ -164,7 +164,7 @@ export const AddTicketForm = () => {
         </Form.Group>
         <Form.Group as={Row}>
           <Form.Label column sm={6} className="freedom-clr mt-2 text-shadow">
-            Requested Delivery Date
+            Date To Be Delivered
           </Form.Label>
           <Col sm={6}>
             <Form.Control
