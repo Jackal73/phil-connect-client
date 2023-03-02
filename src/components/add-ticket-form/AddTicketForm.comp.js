@@ -47,6 +47,9 @@ export const AddTicketForm = () => {
     (state) => state.openTicket
   );
 
+  // const defaultValue = "2000-01-01";
+  // const defaultValue = "1/1/2022";
+
   const [frmData, setFrmData] = useState(initialFrmData);
   const [frmError, setFrmError] = useState(initialFrmError);
 
@@ -97,6 +100,7 @@ export const AddTicketForm = () => {
     dispatch(openNewTicket({ ...frmData }));
   };
 
+  // console.log(frmData.dateOrdered);
   // console.log(frmData.input);
 
   return (
@@ -171,14 +175,16 @@ export const AddTicketForm = () => {
               type="date"
               name="dateOrdered"
               value={frmData.dateOrdered}
-              maxLength="20"
+              maxLength=""
               onChange={handleOnChange}
-              placeholder="Date Ordered"
+              placeholder="Delivery Date"
               required
               className="shado mt-2 bold4"
+              // defaultValue={defaultValue}
             />
             <Form.Text className="center text-danger">
-              {!frmData.dateOrdered && "Request Date is required"}
+              {frmData.dateOrdered === new Date().toLocaleDateString() &&
+                "Request Date is required"}
             </Form.Text>
           </Col>
         </Form.Group>
@@ -292,7 +298,7 @@ export const AddTicketForm = () => {
               className="shado border-2 mt-1"
             />
             <Form.Text className="text-danger center">
-              {!frmData.zipCode && "Zip Code is required"}
+              {!frmData.zipCode && "Location is required"}
             </Form.Text>
           </Col>
         </Form.Group>
