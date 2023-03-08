@@ -64,7 +64,7 @@ export const Ticket = ({ tickets }) => {
         </Row>
 
         <Row className="pl-1 pr-1">
-          <Jumbotron className="mt-2 add-new-ticket jumbotron">
+          <Jumbotron className="mt-3 add-new-ticket jumbotron">
             <Row>
               <Col sm={4} className=" pr-5">
                 {isLoading && <Spinner variant="primary" animation="border" />}
@@ -73,7 +73,6 @@ export const Ticket = ({ tickets }) => {
                   <Alert variant="danger">{replyTicketError}</Alert>
                 )}
                 {replyMsg && <Alert variant="success">{replyMsg}</Alert>}
-
                 {selectedTicket.status === "Connected" ? (
                   <Button
                     style={{ width: "175px", height: "65px" }}
@@ -89,6 +88,30 @@ export const Ticket = ({ tickets }) => {
                     Pending
                   </Button>
                 )}
+                {/* ***************************************** */}
+                {/* {selectedTicket.status === "Connected" ? (
+                  <Button
+                    style={{ width: "175px", height: "65px" }}
+                    className="red bold6 mb-1 ml-2 border-none cur-reg mb-3"
+                  >
+                    Connected
+                  </Button>
+                ) : selectedTicket.status === "Pending" ? (
+                  <Button
+                    style={{ width: "175px", height: "65px" }}
+                    className="green bold6 mb-1 ml-2 border-none cur-reg mb-3 "
+                  >
+                    Pending
+                  </Button>
+                ) : (
+                  <Button
+                    style={{ width: "175px", height: "65px" }}
+                    className="green bold6 mb-1 ml-2 border-none cur-reg mb-3 "
+                  >
+                    Ordered
+                  </Button>
+                )} */}
+                {/* ***************************************** */}
               </Col>
 
               <Col className=" mb-3 rgt">
@@ -294,8 +317,6 @@ export const Ticket = ({ tickets }) => {
             </Form>
           </Jumbotron>
         </Row>
-
-        <hr />
       </Container>
     </>
   );

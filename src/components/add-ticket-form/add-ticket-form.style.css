@@ -218,7 +218,8 @@ input:required {
 input {
   font-weight: 600 !important;
   font-size: 1rem !important;
-  color: hsl(339, 49%, 30%) !important;
+  /* color: hsl(339, 49%, 30%) !important; */
+  color: #000 !important;
   border-radius: 5px !important;
   margin-bottom: 0.3rem !important;
   background-color: transparent !important;
@@ -605,6 +606,10 @@ select:required {
 
 .green {
   background-color: green !important;
+}
+
+.yellow {
+  background-color: goldenrod !important;
 }
 
 /* .mt-paginate {

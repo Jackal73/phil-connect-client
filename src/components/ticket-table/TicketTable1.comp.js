@@ -20,7 +20,9 @@ export const TicketTable1 = ({ tickets }) => {
           <tr className="hard-back text-white">
             <th className="">Request</th>
             <th className="">Date</th>
-            <th className="">Location</th>
+            <th className="">From</th>
+
+            <th className="">To</th>
             <th className="">Address</th>
             <th className="">Status</th>
           </tr>
@@ -28,7 +30,7 @@ export const TicketTable1 = ({ tickets }) => {
         <tbody>
           {searchTicketList.length ? (
             searchTicketList
-              .slice(-20)
+              .slice(-40)
               .reverse()
               .map((row) => (
                 <tr key={row._id}>
@@ -46,6 +48,43 @@ export const TicketTable1 = ({ tickets }) => {
                     <td className="">
                       {row.dateOrdered.slice(8, 10)}
                       {/* {row.dateOrdered.slice(0, 4)} */}
+                    </td>
+                    <td className="">
+                      {row.orderedBy === "ALICIA"
+                        ? "Chester"
+                        : row.orderedBy === "ROBYN"
+                        ? "Chester"
+                        : row.orderedBy === "AMANDA"
+                        ? "Chester"
+                        : row.orderedBy === "NICHOLE"
+                        ? "Chester"
+                        : row.orderedBy === "KRISTA"
+                        ? "Chester"
+                        : row.orderedBy === "NICK"
+                        ? "Chester"
+                        : row.orderedBy === "KRISTIN"
+                        ? "Fenton"
+                        : row.orderedBy === "BRE"
+                        ? "Wright"
+                        : row.orderedBy === "DEBBIE"
+                        ? "Tele"
+                        : row.orderedBy === "TERI"
+                        ? "Hazel"
+                        : row.orderedBy === "KIMBERLY"
+                        ? "Lake"
+                        : row.orderedBy === "KADI"
+                        ? "Lake"
+                        : row.orderedBy === "ERIN"
+                        ? "Peters"
+                        : row.orderedBy === "MELISSA"
+                        ? "Peters"
+                        : row.orderedBy === "DELANEY"
+                        ? "Kirk"
+                        : row.orderedBy === "STEPHANIE"
+                        ? "Kirk"
+                        : row.orderedBy === "SUZY"
+                        ? "Kirk"
+                        : ""}
                     </td>
 
                     <td className="">{row.zipCode}</td>

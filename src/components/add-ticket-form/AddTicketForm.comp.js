@@ -108,6 +108,16 @@ export const AddTicketForm = () => {
       <h1 className="text-center shado text-shadow-w freedom-grad mb-4 pt-2 pb-2 wite border1">
         <span className="opacity">Delivery Request</span>
       </h1>
+      <div className="center font-md mb-3 red border1">
+        **If sending from FT office( i.e."Telegraph" ) to FT office(
+        i.e."Festus" ),
+        <br /> use
+        <span className="bold"> ( i.e. "Telegraph to Festus" )</span> as the
+        <b>
+          <em> Recipient Address.</em>
+        </b>
+        <br /> Do not put the actual address. Thank you.
+      </div>
 
       <Form
         autoComplete="off"
@@ -184,7 +194,7 @@ export const AddTicketForm = () => {
             />
             <Form.Text className="center text-danger">
               {frmData.dateOrdered === new Date().toLocaleDateString() &&
-                "Request Date is required"}
+                "Date To Be Delivered is required"}
             </Form.Text>
           </Col>
         </Form.Group>
@@ -202,10 +212,7 @@ export const AddTicketForm = () => {
                 required
                 onChange={(e) => handleOnChange(e)}
               >
-                {/* <option value="" disabled hidden className=""></option> */}
-                <option className="" value="ENTRY">
-                  "NEW ENTRY"
-                </option>
+                <option value="" disabled hidden className=""></option>
                 <option value="ALICIA">ALICIA</option>
                 <option value="AMANDA">AMANDA</option>
                 <option value="BRE">BRE</option>
@@ -226,17 +233,8 @@ export const AddTicketForm = () => {
                 <option value="TERI">TERI</option>
               </select>
             </div>
-            <Form.Control
-              name="orderedBy"
-              value={frmData.orderedBy}
-              maxLength="20"
-              onChange={handleOnChange}
-              placeholder="Ordered By"
-              required
-              className="shado mt-1"
-            />
             <Form.Text className="text-danger center">
-              {!frmData.orderedBy && "Ordered By is required"}
+              {!frmData.orderedBy && "Orderer is required"}
             </Form.Text>
           </Col>
 
@@ -297,6 +295,7 @@ export const AddTicketForm = () => {
               required
               className="shado border-2 mt-1"
             />
+
             <Form.Text className="text-danger center">
               {!frmData.zipCode && "Location is required"}
             </Form.Text>
@@ -304,7 +303,7 @@ export const AddTicketForm = () => {
         </Form.Group>
         <Form.Group as={Row} className="freedom-clr ">
           <Form.Label column sm={4} className="freedom-clr text-shadow mt-1">
-            Recipient Address
+            Recipient Address**
           </Form.Label>
           <Col sm={8}>
             <div>
@@ -385,7 +384,7 @@ export const AddTicketForm = () => {
           </Form.Text>
         </Form.Group>
 
-        <div className="center">
+        <div className="center mb-3">
           <Button
             style={{ fontSize: "1.3rem", padding: "5px 10px" }}
             type="submit"

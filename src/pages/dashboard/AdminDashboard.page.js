@@ -57,7 +57,7 @@ export const AdminDashboard = () => {
               {new Date().toLocaleDateString()}
             </span>
           </div>
-          <span className="font8">Todays Requests: </span>{" "}
+          {/* <span className="font8">Todays Requests: </span>{" "} */}
           {/* <span className="bold6 font8">{totalTickets}</span> */}
         </Col>
       </Row>
