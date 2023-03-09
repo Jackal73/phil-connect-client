@@ -222,6 +222,7 @@ export const AddTicketForm = () => {
                 <option value="JESSICA">JESSICA</option>
                 <option value="KADI">KADI</option>
                 <option value="KIMBERLY">KIMBERLY</option>
+                <option value="KRISTA">KRISTA</option>
                 <option value="KRISTIN">KRISTIN</option>
                 <option value="MELISSA">MELISSA</option>
                 <option value="MICHELLE">MICHELLE</option>
