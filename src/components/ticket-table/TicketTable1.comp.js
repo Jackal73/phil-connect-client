@@ -51,17 +51,19 @@ export const TicketTable1 = ({ tickets }) => {
                     </td>
                     <td className="">
                       {row.orderedBy === "ALICIA"
-                        ? "Chester"
+                        ? "Chest"
                         : row.orderedBy === "ROBYN"
-                        ? "Chester"
-                        : row.orderedBy === "AMANDA"
-                        ? "Chester"
-                        : row.orderedBy === "NICHOLE"
-                        ? "Chester"
+                        ? "Chest"
                         : row.orderedBy === "KRISTA"
-                        ? "Chester"
+                        ? "Chest"
+                        : row.orderedBy === "AMANDA"
+                        ? "Chest"
+                        : row.orderedBy === "NICHOLE"
+                        ? "Chest"
+                        : row.orderedBy === "KRISTA"
+                        ? "Chest"
                         : row.orderedBy === "NICK"
-                        ? "Chester"
+                        ? "Chest"
                         : row.orderedBy === "KRISTIN"
                         ? "Fenton"
                         : row.orderedBy === "BRE"
@@ -86,6 +88,7 @@ export const TicketTable1 = ({ tickets }) => {
                         ? "Kirk"
                         : ""}
                     </td>
+                    {/* <td>{row.orderedBy}</td> */}
 
                     <td className="">{row.zipCode}</td>
                     <td className="">{row.address}</td>
