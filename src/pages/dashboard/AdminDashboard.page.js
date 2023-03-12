@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import philCar from "../../assets/img/philCar.png";
-import { SearchForm } from "../../components/search form/SearchForm.comp";
+
 import { TicketTable1 } from "../../components/ticket-table/TicketTable1.comp";
 import { fetchAllTickets } from "../ticket-list/ticketsAction";
 import { SearchFormM } from "../../components/search form/SearchFormM.comp";
+import { SearchFormF } from "../../components/search form/SearchFormF.comp";
 
 export const AdminDashboard = () => {
   const dispatch = useDispatch();
@@ -47,25 +48,18 @@ export const AdminDashboard = () => {
           Dᴇʟɪᴠᴇʀʏ Rᴇ<span style={{ fontSize: "25px" }}>Q</span>ᴜᴇsᴛs
         </Col>
       </Row>
-      <Row>
-        <Col className="mt-2 bold6 freedom-clr center">Scheduled For</Col>
-      </Row>
-      <Row>
-        <Col className="center freedom-clr bold4 font2x">
-          <div>
-            <span className="bold6 font3x text-grad">
-              {new Date().toLocaleDateString()}
-            </span>
-          </div>
-          {/* <span className="font8">Todays Requests: </span>{" "} */}
-          {/* <span className="bold6 font8">{totalTickets}</span> */}
-        </Col>
-      </Row>
-      <Row className="center">
-        <Col sm={6} className="center">
+
+      <Row className="mt-2 row-sm">
+        <Col className="">
           <SearchFormM className="" />
         </Col>
       </Row>
+      <Row className="mt-1 mb-2 row-sm">
+        <Col className="">
+          <SearchFormF className="" />
+        </Col>
+      </Row>
+
       <Row>
         <Col className="recent-ticket">
           <TicketTable1 tickets={tickets} />

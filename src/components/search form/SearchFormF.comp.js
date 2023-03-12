@@ -1,15 +1,15 @@
 import React from "react";
 import { Col, Form, Row } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { filterSearchTicketM } from "../../pages/ticket-list/ticketsAction";
+import { filterSearchTicketF } from "../../pages/ticket-list/ticketsAction";
 
-export const SearchFormM = () => {
+export const SearchFormF = () => {
   const dispatch = useDispatch();
 
   const handleOnChange = (e) => {
     const { value } = e.target;
 
-    dispatch(filterSearchTicketM(value));
+    dispatch(filterSearchTicketF(value));
   };
 
   return (
@@ -18,10 +18,9 @@ export const SearchFormM = () => {
         <Form.Group as={Row}>
           <Col sm="9">
             <Form.Control
-              type="Date"
-              name="searchMonth"
+              name="searchFrom"
               onChange={handleOnChange}
-              placeholder=""
+              placeholder="Search 'From'"
               className="mt-3 center"
               autoComplete="off"
             />

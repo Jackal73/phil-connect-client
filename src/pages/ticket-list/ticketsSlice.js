@@ -6,7 +6,6 @@ const initialState = {
   error: "",
   replyTicketError: "",
   searchTicketList: [],
-  // userTicketList: [],
   selectedTicket: {},
   replyMsg: "",
 };
@@ -23,7 +22,6 @@ const ticketListSlice = createSlice({
       state.searchTicketList = action.payload;
       state.selectedTicket = action.payload;
       state.ticket = action.payload;
-      // state.userTicketList = action.payload;
       state.isLoading = false;
     },
     fetchTicketFail: (state, { payload }) => {
@@ -45,12 +43,14 @@ const ticketListSlice = createSlice({
         return row.dateOrdered.toLowerCase().includes(payload);
       });
     },
+    searchTicketsF: (state, { payload }) => {
+      state.searchTicketList = state.tickets.filter((row) => {
+        if (!payload) return row;
+
+        return row.from.toLowerCase().includes(payload);
+      });
+    },
     searchTicketsC: (state, { payload }) => {
-      // state.searchTicketList = state.tickets.filter((row) => {
-      //   if (!payload) return row;
-      //   return row.closerOne.toLowerCase().includes(payload.toLowerCase());
-      // });
-      // state.userTicketSearch =
       state.searchTicketList = state.tickets.filter((row) => {
         if (!payload) return row;
 
@@ -58,13 +58,6 @@ const ticketListSlice = createSlice({
       });
     },
     searchTicketsCMo: (state, { payload }) => {
-      // state.userTicketSearch = state.searchTicketList = state.tickets.filter(
-      //   (row) => {
-      //     if (!payload) return row;
-
-      //     return row.closerOne.toLowerCase().includes(payload);
-      //   }
-      // );
       state.searchTicketList = state.searchTicketList.filter((row) => {
         if (!payload) return row;
 
@@ -135,6 +128,7 @@ export const {
   searchTicketsM,
   searchTicketsC,
   searchTicketsCMo,
+  searchTicketsF,
   resetResponseMsg,
 } = actions;
 

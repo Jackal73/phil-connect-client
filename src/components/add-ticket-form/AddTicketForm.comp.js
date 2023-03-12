@@ -17,6 +17,7 @@ import { resetSuccessMsg } from "./addTicketSlicer";
 const initialFrmData = {
   dateOrdered: new Date().toLocaleDateString(),
   orderedBy: "",
+  from: "",
   recipient: "",
   address: "",
   zipCode: "",
@@ -36,6 +37,7 @@ const initialFrmError = {
   zipCode: "false",
   status: "false",
   receiver: "false",
+  from: "false",
   // fileNo: "false",
   // packageContents: "false",
 };
@@ -46,9 +48,6 @@ export const AddTicketForm = () => {
   const { isLoading, error, successMsg } = useSelector(
     (state) => state.openTicket
   );
-
-  // const defaultValue = "2000-01-01";
-  // const defaultValue = "1/1/2022";
 
   const [frmData, setFrmData] = useState(initialFrmData);
   const [frmError, setFrmError] = useState(initialFrmError);
@@ -79,6 +78,7 @@ export const AddTicketForm = () => {
     const isRecipientValid = await shortText(frmData.recipient);
     const isAddressValid = await shortText(frmData.address);
     const isZipCodeValid = await shortText(frmData.zipCode);
+    const isFromValid = await shortText(frmData.from);
     // const isFileNoValid = await shortText(frmData.fileNo);
     // const isPackageContentsValid = await shortText(frmData.packageContents);
     const isStatusValid = await shortText(frmData.status);
@@ -91,6 +91,7 @@ export const AddTicketForm = () => {
       recipient: !isRecipientValid,
       isAddressValid: !isAddressValid,
       zipCode: !isZipCodeValid,
+      from: !isFromValid,
       // fileNo: !isFileNoValid,
       // packageContents: !isPackageContentsValid,
       status: !isStatusValid,
@@ -99,9 +100,6 @@ export const AddTicketForm = () => {
 
     dispatch(openNewTicket({ ...frmData }));
   };
-
-  // console.log(frmData.dateOrdered);
-  // console.log(frmData.input);
 
   return (
     <Jumbotron className="mt-3 add-new-ticket jumbotron">
@@ -136,8 +134,6 @@ export const AddTicketForm = () => {
               maxLength="12"
               onChange={handleOnChange}
               placeholder=""
-              // required
-
               className=" mt-1"
             />
             <Form.Text className="text-danger center">
@@ -190,7 +186,6 @@ export const AddTicketForm = () => {
               placeholder="Delivery Date"
               required
               className="shado mt-2 bold4"
-              // defaultValue={defaultValue}
             />
             <Form.Text className="center text-danger">
               {frmData.dateOrdered === new Date().toLocaleDateString() &&
@@ -238,7 +233,41 @@ export const AddTicketForm = () => {
               {!frmData.orderedBy && "Orderer is required"}
             </Form.Text>
           </Col>
+          <Form.Label column sm={2}>
+            Pickup Office
+          </Form.Label>
+          <Col sm={4}>
+            <div>
+              <select
+                className="shado bold4 mb-2"
+                defaultValue=""
+                name="from"
+                required
+                onChange={(e) => handleOnChange(e)}
+              >
+                <option className="" value="ENTRY">
+                  "NEW ENTRY"
+                </option>
+                <option value="Fest">FESTUS OFFICE</option>
+                <option value="Hazel">HAZELWOOD OFFICE</option>
+                <option value="Kirk">KIRKWOOD OFFICE</option>
+                <option value="Chest">CHESTERFIELD OFFICE</option>
+                <option value="Peter">ST.PETERS OFFICE</option>
+                <option value="Tele">TELEGRAPH OFFICE</option>
+                <option value="Fentn">FENTON OFFICE</option>
+                <option value="Lstl">LAKE ST.LOUIS OFFICE</option>
+                <option value="Wrigt">WRIGHT CITY OFFICE</option>
+                <option value=""></option>
+                <option value=""></option>
+              </select>
+            </div>
 
+            <Form.Text className="text-danger center">
+              {!frmData.from && "Pickup Office is required"}
+            </Form.Text>
+          </Col>
+        </Form.Group>
+        <Form.Group as={Row} className="freedom-clr text-shadow ">
           <Form.Label column sm={2} className="freedom-clr text-shadow">
             Recipient
           </Form.Label>

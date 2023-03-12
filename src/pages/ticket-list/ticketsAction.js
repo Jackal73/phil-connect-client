@@ -15,6 +15,7 @@ import {
   searchTicketsC,
   searchTicketsCMo,
   searchTicketsM,
+  searchTicketsF,
 } from "./ticketsSlice";
 
 import {
@@ -43,6 +44,9 @@ export const filterSearchTicketM = (str) => (dispatch) => {
 };
 export const filterSearchTicketC = (str) => (dispatch) => {
   dispatch(searchTicketsC(str));
+};
+export const filterSearchTicketF = (str) => (dispatch) => {
+  dispatch(searchTicketsF(str));
 };
 export const filterSearchTicketCMo = (str) => (dispatch) => {
   dispatch(searchTicketsCMo(str));
