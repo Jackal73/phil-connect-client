@@ -20,7 +20,7 @@ export const SearchForm = () => {
             <Form.Control
               name="searchStr"
               onChange={handleOnChange}
-              placeholder="Search Request #"
+              placeholder="Search *From*"
               className="mt-3 center"
               autoComplete="off"
             />

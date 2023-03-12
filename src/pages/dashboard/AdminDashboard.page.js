@@ -7,6 +7,7 @@ import { TicketTable1 } from "../../components/ticket-table/TicketTable1.comp";
 import { fetchAllTickets } from "../ticket-list/ticketsAction";
 import { SearchFormM } from "../../components/search form/SearchFormM.comp";
 import { SearchFormF } from "../../components/search form/SearchFormF.comp";
+import { SearchForm } from "../../components/search form/SearchForm.comp";
 
 export const AdminDashboard = () => {
   const dispatch = useDispatch();
@@ -56,7 +57,7 @@ export const AdminDashboard = () => {
       </Row>
       <Row className="mt-1 mb-2 row-sm">
         <Col className="">
-          <SearchFormF className="" />
+          <SearchForm className="" />
         </Col>
       </Row>
 
