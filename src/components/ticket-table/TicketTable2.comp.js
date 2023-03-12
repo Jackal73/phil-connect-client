@@ -34,6 +34,7 @@ export const TicketTable2 = ({ tickets }) => {
           <tr className="hard-back text-white">
             <th className="">Req.#</th>
             <th className="">Date</th>
+            <th className="">Who</th>
             <th className="">From</th>
 
             <th className="">To</th>
@@ -57,6 +58,7 @@ export const TicketTable2 = ({ tickets }) => {
                   <td>
                     {row.dateOrdered.slice(5, 10)}-{row.dateOrdered.slice(0, 4)}
                   </td>
+                  <td className="">{row.orderedBy}</td>
                   <td className="">
                     {row.orderedBy === "ALICIA"
                       ? "Chester"

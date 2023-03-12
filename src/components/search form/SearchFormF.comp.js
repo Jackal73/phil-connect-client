@@ -17,13 +17,37 @@ export const SearchFormF = () => {
       <Form>
         <Form.Group as={Row}>
           <Col sm="9">
-            <Form.Control
-              name="searchFrom"
+            <div>
+              <select
+                className="shado bold4 mb-2"
+                defaultValue=""
+                name="searchFrom"
+                onChange={(e) => handleOnChange(e)}
+              >
+                <option className="" value="ENTRY">
+                  "NEW ENTRY"
+                </option>
+                <option value="Fest">FESTUS </option>
+                <option value="Hazel">HAZELWOOD </option>
+                <option value="Kirk">KIRKWOOD</option>
+
+                <option value="Peter">ST. PETERS</option>
+                <option value="Tele">TELEGRAPH </option>
+                <option value="Chest">Chest</option>
+                <option value="Guild Mortgage">GUILD MORTGAGE</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+              </select>
+            </div>
+            {/* <Form.Control
+              type="text"
+              name="searchStr"
               onChange={handleOnChange}
               placeholder="Search 'From'"
               className="mt-3 center"
               autoComplete="off"
-            />
+            /> */}
           </Col>
         </Form.Group>
       </Form>

@@ -86,6 +86,11 @@ table th:nth-child(5) {
   border-bottom: 2px solid rgba(0, 0, 128, 1) !important;
 }
 
+table th:nth-child(6) {
+  border-top: 1px solid rgba(0, 0, 128, 1) !important;
+  border-bottom: 2px solid rgba(0, 0, 128, 1) !important;
+}
+
 table th:last-child {
   border-top: 1px solid rgba(0, 0, 128, 1) !important;
   border-left: 1px solid rgba(0, 0, 128, 1) !important;
@@ -127,6 +132,11 @@ td:nth-child(4) {
 }
 
 td:nth-child(5) {
+  border-right: none !important;
+  border-left: none !important;
+}
+
+td:nth-child(6) {
   border-right: none !important;
   border-left: none !important;
 }
