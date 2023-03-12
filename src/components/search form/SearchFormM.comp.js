@@ -21,7 +21,7 @@ export const SearchFormM = () => {
               type="Date"
               name="searchMonth"
               onChange={handleOnChange}
-              placeholder=""
+              placeholder="Date"
               className="mt-3 center"
               autoComplete="off"
             />
