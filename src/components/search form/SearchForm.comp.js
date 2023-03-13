@@ -20,12 +20,14 @@ export const SearchForm = () => {
           <Col sm="9">
             <div>
               <select
-                className="shado bold4 mb-2"
+                className="shado bold4 mb-2 center"
                 defaultValue=""
                 name="searchFrom"
                 onChange={(e) => handleOnChange(e)}
               >
-                <option value="">"ALL"</option>
+                <option className="" value="">
+                  "ALL"
+                </option>
                 <option value="Chest">Chest</option>
                 <option value="Lstl">Lstl</option>
                 <option value="Hazel">Hazel </option>

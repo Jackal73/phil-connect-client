@@ -6,14 +6,12 @@ import {
   Col,
   Container,
   Form,
-  FormGroup,
   Jumbotron,
   Row,
 } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import {
-  closeTicket,
   fetchSingleTicket,
   replyOnTicket,
 } from "../../pages/ticket-list/ticketsAction";

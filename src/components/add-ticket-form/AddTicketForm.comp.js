@@ -303,17 +303,19 @@ export const AddTicketForm = () => {
                 <option className="" value="ENTRY">
                   "NEW ENTRY"
                 </option>
+                <option value="Chesterfield">CHESTERFIELD</option>
+                <option value="Chesterfield Office">CHESTERFIELD OFFICE</option>
+                <option value="Fenton Office">FENTON OFFICE</option>
                 <option value="Festus Office">FESTUS OFFICE</option>
                 <option value="Hazelwood Office">HAZELWOOD OFFICE</option>
+                <option value="Investors Title">INVESTORS TITLE</option>
                 <option value="Kirkwood Office">KIRKWOOD OFFICE</option>
-                <option value="MANCHESTER OFFICE">MANCHESTER OFFICE</option>
+                <option value="Lake St.Louis Office">
+                  LAKE ST.LOUIS OFFICE
+                </option>
                 <option value="St. Peters Office">ST. PETERS OFFICE</option>
                 <option value="Telegraph Office">TELEGRAPH OFFICE</option>
-                <option value="Investors Title">INVESTORS TITLE</option>
-                <option value="Guild Mortgage">GUILD MORTGAGE</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
+                <option value="Wright City Office">WRIGHT CITY OFFICE</option>
               </select>
             </div>
             <Form.Control

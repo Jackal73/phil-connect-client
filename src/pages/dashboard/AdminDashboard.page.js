@@ -12,7 +12,6 @@ import { SearchForm } from "../../components/search form/SearchForm.comp";
 export const AdminDashboard = () => {
   const dispatch = useDispatch();
   const { tickets } = useSelector((state) => state.tickets);
-  const totalTickets = tickets.length;
 
   useEffect(() => {
     if (!tickets.length) {

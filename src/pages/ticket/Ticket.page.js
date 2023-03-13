@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { PageBreadcrumb } from "../../components/breadcrumb/Breadcrumb.comp";
 import { closeTicket, fetchSingleTicket } from "../ticket-list/ticketsAction";
 import { resetResponseMsg } from "../ticket-list/ticketsSlice";
@@ -52,9 +51,6 @@ export const Ticket = ({ tickets }) => {
   let adTime = dateY.toLocaleTimeString().substring(0, 10);
   dateY = new Date(dateY.getTime() + dateY.getTimezoneOffset());
   let adDate = dateY.toLocaleDateString().substring(0, 10);
-
-  let dateE = new Date(selectedTicket.updatedAt);
-  dateE = new Date(dateE.getTime() + dateE.getTimezoneOffset() * 60000);
 
   return (
     <>

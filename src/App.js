@@ -6,13 +6,9 @@ import { Registration } from "./pages/registration/Registration.page";
 import "./App.css";
 import { PrivateRoute } from "./components/private-route/PrivateRoute.comp";
 import { UpdateTicket } from "./components/update-ticket/UpdateTicket.comp";
-import Excel from "./pages/excel/Excel.page";
-import Excel3 from "./pages/excel/Excel3.page";
 import { AddTicket } from "./pages/new-ticket/AddTicket.page";
 import { PasswordOtpForm } from "./pages/password-reset/PasswordOtpForm.page";
 import { TicketListsAll } from "./pages/ticket-list/TicketListsAll.page";
-// import { TicketListsEdit } from "./pages/ticket-list/TicketListsEdit.page";
-// import { TicketListsFile } from "./pages/ticket-list/TicketListsFile.page";
 import { EditTicket } from "./pages/ticket/EditTicket.page";
 import { Ticket } from "./pages/ticket/Ticket.page";
 import { UserVerification } from "./pages/user-verification/UserVerification.page";
@@ -38,6 +34,7 @@ function App() {
           <PrivateRoute exact path="/adminDashboard">
             <AdminDashboard />
           </PrivateRoute>
+
           <PrivateRoute exact path="/add-ticket">
             <AddTicket />
           </PrivateRoute>
@@ -47,23 +44,11 @@ function App() {
           <PrivateRoute exact path="/ticket/edit/:tId">
             <EditTicket />
           </PrivateRoute>
-          <PrivateRoute exact path="/tickets">
-            {/* <TicketListsFile /> */}
-          </PrivateRoute>
           <PrivateRoute exact path="/tickets-all">
             <TicketListsAll />
           </PrivateRoute>
-          <PrivateRoute exact path="/tickets/edit">
-            {/* <TicketListsEdit /> */}
-          </PrivateRoute>
           <PrivateRoute exact path="/update">
             <UpdateTicket />
-          </PrivateRoute>
-          <PrivateRoute exact path="/excel">
-            <Excel />
-          </PrivateRoute>
-          <PrivateRoute exact path="/excel3">
-            <Excel3 />
           </PrivateRoute>
         </Switch>
       </Router>
