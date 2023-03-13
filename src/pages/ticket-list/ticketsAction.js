@@ -12,10 +12,7 @@ import {
   replyTicketLoading,
   replyTicketSuccess,
   searchTickets,
-  searchTicketsC,
-  searchTicketsCMo,
   searchTicketsM,
-  searchTicketsF,
 } from "./ticketsSlice";
 
 import {
@@ -41,15 +38,6 @@ export const filterSearchTicket = (str) => (dispatch) => {
 };
 export const filterSearchTicketM = (str) => (dispatch) => {
   dispatch(searchTicketsM(str));
-};
-export const filterSearchTicketC = (str) => (dispatch) => {
-  dispatch(searchTicketsC(str));
-};
-export const filterSearchTicketF = (str) => (dispatch) => {
-  dispatch(searchTicketsF(str));
-};
-export const filterSearchTicketCMo = (str) => (dispatch) => {
-  dispatch(searchTicketsCMo(str));
 };
 
 //Actions for single ticket only

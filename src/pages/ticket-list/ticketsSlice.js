@@ -43,28 +43,6 @@ const ticketListSlice = createSlice({
         return row.dateOrdered.toLowerCase().includes(payload);
       });
     },
-    searchTicketsF: (state, { payload }) => {
-      state.searchTicketList = state.tickets.filter((row) => {
-        if (!payload) return row;
-
-        return row.from.toLowerCase().includes(payload);
-      });
-    },
-    searchTicketsC: (state, { payload }) => {
-      state.searchTicketList = state.tickets.filter((row) => {
-        if (!payload) return row;
-
-        return row.closerOne.toLowerCase().includes(payload);
-      });
-    },
-    searchTicketsCMo: (state, { payload }) => {
-      state.searchTicketList = state.searchTicketList.filter((row) => {
-        if (!payload) return row;
-
-        return row.fundDate.toLowerCase().includes(payload);
-      });
-    },
-
     fetchSingleTicketLoading: (state) => {
       state.isLoading = true;
     },
@@ -126,9 +104,6 @@ export const {
   closeTicketFail,
   searchTickets,
   searchTicketsM,
-  searchTicketsC,
-  searchTicketsCMo,
-  searchTicketsF,
   resetResponseMsg,
 } = actions;
 

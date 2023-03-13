@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Form, Row } from "react-bootstrap";
 import { useDispatch } from "react-redux";
+
 import { filterSearchTicket } from "../../pages/ticket-list/ticketsAction";
 
 export const SearchForm = () => {
@@ -16,12 +17,12 @@ export const SearchForm = () => {
     <div>
       <Form>
         <Form.Group as={Row}>
-          <Col sm="12">
+          <Col sm="9">
             <Form.Control
               name="searchStr"
               onChange={handleOnChange}
-              placeholder="Search *From*"
-              className="mt-3 center"
+              placeholder="From"
+              className="center"
             />
           </Col>
         </Form.Group>
