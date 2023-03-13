@@ -201,7 +201,7 @@ export const AddTicketForm = () => {
           <Col sm={4}>
             <div>
               <select
-                className="shado select"
+                className="shado select center"
                 defaultValue=""
                 name="orderedBy"
                 required
@@ -239,7 +239,7 @@ export const AddTicketForm = () => {
           <Col sm={4}>
             <div>
               <select
-                className="shado bold4 mb-2"
+                className="shado bold4 mb-2 center"
                 defaultValue=""
                 name="officeFrom"
                 required
@@ -248,14 +248,14 @@ export const AddTicketForm = () => {
                 <option className="" value="ENTRY">
                   "NEW ENTRY"
                 </option>
+                <option value="Chest">CHESTERFIELD OFFICE</option>
+                <option value="Fentn">FENTON OFFICE</option>
                 <option value="Fest">FESTUS OFFICE</option>
                 <option value="Hazel">HAZELWOOD OFFICE</option>
                 <option value="Kirk">KIRKWOOD OFFICE</option>
-                <option value="Chest">CHESTERFIELD OFFICE</option>
+                <option value="Lstl">LAKE ST.LOUIS OFFICE</option>
                 <option value="Peter">ST.PETERS OFFICE</option>
                 <option value="Tele">TELEGRAPH OFFICE</option>
-                <option value="Fentn">FENTON OFFICE</option>
-                <option value="Lstl">LAKE ST.LOUIS OFFICE</option>
                 <option value="Wrigt">WRIGHT CITY OFFICE</option>
                 <option value=""></option>
                 <option value=""></option>
@@ -289,12 +289,17 @@ export const AddTicketForm = () => {
 
         <Form.Group as={Row} className="freedom-clr ">
           <Form.Label column sm={8} className="mt-1 text-shadow">
-            Recipient Location
+            Recipient Location{" "}
+            <span className="text-red font2x">
+              {" "}
+              ** Company, Office, or Building Name **
+            </span>
           </Form.Label>
+
           <Col sm={4}>
             <div>
               <select
-                className="shado bold4 mb-2"
+                className="shado bold4 mb-2 center"
                 defaultValue=""
                 name="zipCode"
                 required
@@ -309,6 +314,12 @@ export const AddTicketForm = () => {
                 <option value="Festus Office">FESTUS OFFICE</option>
                 <option value="Hazelwood Office">HAZELWOOD OFFICE</option>
                 <option value="Investors Title">INVESTORS TITLE</option>
+                <option value="Keller Williams">Keller Williams</option>
+                <option value="Keller Williams Chesterfield">
+                  Keller Williams Chesterfield
+                </option>
+                <option value="Keller Williams STL">Keller Williams STL</option>
+
                 <option value="Kirkwood Office">KIRKWOOD OFFICE</option>
                 <option value="Lake St.Louis Office">
                   LAKE ST.LOUIS OFFICE
@@ -318,6 +329,7 @@ export const AddTicketForm = () => {
                 <option value="Wright City Office">WRIGHT CITY OFFICE</option>
               </select>
             </div>
+
             <Form.Control
               name="zipCode"
               value={frmData.zipCode}
@@ -340,7 +352,7 @@ export const AddTicketForm = () => {
           <Col sm={8}>
             <div>
               <select
-                className="shado bold4 mb-2"
+                className="shado bold4 mb-2 center"
                 defaultValue=""
                 name="address"
                 required
@@ -355,9 +367,15 @@ export const AddTicketForm = () => {
                 <option value="17280 N Outer Forty Rd Suite 101">
                   17280 N OUTER FORTY RD, SUITE 101
                 </option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
+                <option value="16401 Swingley Ridge Rd., Ste. 200, Chesterfield, MO 63017">
+                  16401 Swingley Ridge Rd., Ste. 200, Chesterfield, MO 63017
+                </option>
+                <option value="1717 Hidden Creek Ct., St. Louis, MO 63131">
+                  1717 Hidden Creek Ct., St. Louis, MO 63131
+                </option>
+                <option value="4706 Hampton Ave., St. Louis mo 63109">
+                  4706 Hampton Ave., St. Louis MO 63109
+                </option>
                 <option value=""></option>
               </select>
             </div>

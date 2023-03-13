@@ -35,11 +35,12 @@ export const TicketTable2 = ({ tickets }) => {
             <th className="">Req.#</th>
             <th className="">Deliv Date</th>
 
-            <th className="">Who</th>
+            <th className="">Sender</th>
             <th className="">From</th>
 
             <th className="">To</th>
             <th className="">Address</th>
+            <th className="">Receiver</th>
             <th className="">Status</th>
           </tr>
         </thead>
@@ -101,6 +102,7 @@ export const TicketTable2 = ({ tickets }) => {
                   <td>{row.zipCode}</td>
 
                   <td className="">{row.address}</td>
+                  <td className="">{row.receiver}</td>
                   <td className="">
                     {row.status === "Connected" ? (
                       <Button className="red bold6 mb-1 ml-2 pl-1 pr-1 pt-0 pb-0 noBorder border">
