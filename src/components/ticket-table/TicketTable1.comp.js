@@ -33,7 +33,14 @@ export const TicketTable1 = ({ tickets }) => {
               .map((row) => (
                 <tr key={row._id}>
                   <>
-                    <td>{row.dateOrdered.slice(8, 10)}</td>
+                    <td>
+                      <Link
+                        to={`/ticket/${row._id}`}
+                        className="link-grad bold6"
+                      >
+                        {row.dateOrdered.slice(8, 10)}
+                      </Link>
+                    </td>
                     <td className="">
                       {row.status === "Connected" ? (
                         <Button className="red bold6 mb-1 ml-2 pl-2 pr-2 pt-0 pb-0 noBorder rad">
@@ -45,14 +52,7 @@ export const TicketTable1 = ({ tickets }) => {
                         </Button>
                       )}
                     </td>
-                    <td>
-                      <Link
-                        to={`/ticket/${row._id}`}
-                        className="link-grad bold6"
-                      >
-                        {row.from}
-                      </Link>
-                    </td>
+                    <td>{row.officeFrom}</td>
 
                     <td className="">{row.zipCode}</td>
                     <td className="">{row.address}</td>

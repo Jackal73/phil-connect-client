@@ -33,7 +33,7 @@ const ticketListSlice = createSlice({
       state.searchTicketList = state.tickets.filter((row) => {
         if (!payload) return row;
 
-        return row.zipCode.toLowerCase().includes(payload.toLowerCase());
+        return row.officeFrom.toLowerCase().includes(payload.toLowerCase());
       });
     },
     searchTicketsM: (state, { payload }) => {

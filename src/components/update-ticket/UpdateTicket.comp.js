@@ -44,6 +44,7 @@ export const UpdateTicket = ({ _id, data }) => {
     packageContents: selectedTicket.packageContents,
     created: selectedTicket.created,
     receiver: selectedTicket.receiver,
+    officeFrom: selectedTicket.officeFrom,
   };
 
   const [values, setValues] = useState(initialValues);
@@ -72,6 +73,7 @@ export const UpdateTicket = ({ _id, data }) => {
       status,
       created,
       receiver,
+      officeFrom,
     } = values;
 
     const msgObj = {
@@ -85,6 +87,7 @@ export const UpdateTicket = ({ _id, data }) => {
       status,
       created,
       receiver,
+      officeFrom,
     };
 
     dispatch(replyOnTicket(_id, { ...msgObj }));
@@ -139,9 +142,7 @@ export const UpdateTicket = ({ _id, data }) => {
               </Form.Label>
               <Col sm={6}>
                 <Form.Control
-                  // name="fileNo"
                   value={values.status}
-                  // defaultValue="pending"
                   onChange={handleOnChange}
                   style={{
                     borderRadius: ".4rem",
@@ -205,6 +206,23 @@ export const UpdateTicket = ({ _id, data }) => {
                 />
               </Col>
               <Form.Label column sm={2} className="">
+                FT Office
+              </Form.Label>
+              <Col sm={4}>
+                <Form.Control
+                  name="officeFrom"
+                  value={values.officeFrom}
+                  onChange={handleOnChange}
+                  style={{
+                    borderRadius: ".4rem",
+                  }}
+                  placeholder="Ordered By"
+                  className="shado upper"
+                />
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column sm={2} className="">
                 Recipient
               </Form.Label>
               <Col sm={4}>
@@ -216,13 +234,11 @@ export const UpdateTicket = ({ _id, data }) => {
                     borderRadius: ".4rem",
                   }}
                   placeholder="Recipient"
-                  className="shado upper"
+                  className="shado upper mb-3"
                 />
               </Col>
-            </Form.Group>
-            <Form.Group as={Row}>
-              <Form.Label column sm={8} className="mt-3">
-                Recipient Zip Code
+              <Form.Label column sm={2} className="">
+                Location
               </Form.Label>
               <Col sm={4}>
                 <Form.Control
@@ -233,9 +249,11 @@ export const UpdateTicket = ({ _id, data }) => {
                     borderRadius: ".4rem",
                   }}
                   placeholder={selectedTicket.zipCode}
-                  className="shado mb-3 mt-3"
+                  className="shado "
                 />
               </Col>
+            </Form.Group>
+            <Form.Group as={Row}>
               <Form.Label column sm={4}>
                 Address
               </Form.Label>

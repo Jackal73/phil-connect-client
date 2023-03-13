@@ -17,7 +17,7 @@ import { resetSuccessMsg } from "./addTicketSlicer";
 const initialFrmData = {
   dateOrdered: new Date().toLocaleDateString(),
   orderedBy: "",
-  from: "",
+  officeFrom: "",
   recipient: "",
   address: "",
   zipCode: "",
@@ -37,7 +37,7 @@ const initialFrmError = {
   zipCode: "false",
   status: "false",
   receiver: "false",
-  from: "false",
+  officeFrom: "false",
   // fileNo: "false",
   // packageContents: "false",
 };
@@ -78,7 +78,7 @@ export const AddTicketForm = () => {
     const isRecipientValid = await shortText(frmData.recipient);
     const isAddressValid = await shortText(frmData.address);
     const isZipCodeValid = await shortText(frmData.zipCode);
-    const isFromValid = await shortText(frmData.from);
+    const isOfficeFromValid = await shortText(frmData.officeFrom);
     // const isFileNoValid = await shortText(frmData.fileNo);
     // const isPackageContentsValid = await shortText(frmData.packageContents);
     const isStatusValid = await shortText(frmData.status);
@@ -91,7 +91,7 @@ export const AddTicketForm = () => {
       recipient: !isRecipientValid,
       isAddressValid: !isAddressValid,
       zipCode: !isZipCodeValid,
-      from: !isFromValid,
+      officeFrom: !isOfficeFromValid,
       // fileNo: !isFileNoValid,
       // packageContents: !isPackageContentsValid,
       status: !isStatusValid,
@@ -241,7 +241,7 @@ export const AddTicketForm = () => {
               <select
                 className="shado bold4 mb-2"
                 defaultValue=""
-                name="from"
+                name="officeFrom"
                 required
                 onChange={(e) => handleOnChange(e)}
               >
@@ -263,7 +263,7 @@ export const AddTicketForm = () => {
             </div>
 
             <Form.Text className="text-danger center">
-              {!frmData.from && "Pickup Office is required"}
+              {!frmData.officeFrom && "Pickup Office is required"}
             </Form.Text>
           </Col>
         </Form.Group>
