@@ -22,7 +22,6 @@ export const SearchForm = () => {
               onChange={handleOnChange}
               placeholder="Search *From*"
               className="mt-3 center"
-              autoComplete="off"
             />
           </Col>
         </Form.Group>

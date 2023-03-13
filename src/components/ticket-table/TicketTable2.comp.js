@@ -33,7 +33,8 @@ export const TicketTable2 = ({ tickets }) => {
         <thead>
           <tr className="hard-back text-white">
             <th className="">Req.#</th>
-            <th className="">Date</th>
+            <th className="">Deliv Date</th>
+
             <th className="">Who</th>
             <th className="">From</th>
 
