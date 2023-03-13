@@ -57,7 +57,7 @@ export const AdminDashboard = () => {
       </Row>
       <Row className="mt-1 mb-2 row-sm">
         <Col className="">
-          <SearchForm className="" />
+          <SearchForm />
         </Col>
       </Row>
 
