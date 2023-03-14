@@ -15,14 +15,14 @@ export const SearchFormM = () => {
   return (
     <div>
       <Form>
-        <Form.Group as={Row}>
+        <Form.Group as={Row} className="ctr">
           <Col sm="9">
             <Form.Control
               type="Date"
               name="searchMonth"
               onChange={handleOnChange}
               placeholder="Date"
-              className="mt-3 center"
+              className="mt-3 mb-2 shado center freedom-clr"
               autoComplete="off"
             />
           </Col>

@@ -69,11 +69,20 @@
   border: 3px solid red !important;
 }
 
+.border10-red {
+  border: 1px solid red !important;
+  border-radius: 10px !important;
+}
+
 .border-green {
   border: 3px solid green !important;
 }
 .rad {
   border-radius: 15px !important;
+}
+
+.red {
+  background-color: red !important;
 }
 
 .border-none {

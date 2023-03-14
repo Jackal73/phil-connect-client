@@ -106,22 +106,26 @@ export const AddTicketForm = () => {
       <h1 className="text-center shado text-shadow-w freedom-grad mb-4 pt-2 pb-2 wite border1">
         <span className="opacity">Delivery Request</span>
       </h1>
-      <div className="center font-md mb-3 red border1">
-        **If sending from FT office( i.e."Telegraph" ) to FT office(
-        i.e."Festus" ),
+      <div className="center font3x mb-3 text-red border1">
+        **When sending from FT office( i.e."Telegraph" ) to FT office(
+        i.e."Kirkwood" ),
         <br /> use
-        <span className="bold"> ( i.e. "Telegraph to Festus" )</span> as the
+        <span className="text-grad text-shadow bold">
+          {" "}
+          ( "Telegraph to Kirkwood" )
+        </span>{" "}
+        as the
         <b>
-          <em> Recipient Address.</em>
+          <em className="text-grad text-shadow"> Recipient Address**</em>.
         </b>
-        <br /> Do not put the actual address. Thank you.
+        <br /> <i className="">Do not use the actual address</i>{" "}
       </div>
 
       <Form
         autoComplete="off"
         onSubmit={handleOnSubmit}
         className="shado p-3"
-        style={{ borderRadius: "5px", marginTop: "40px" }}
+        style={{ borderRadius: "5px", marginTop: "24px" }}
       >
         <Form.Group as={Row} className="freedom-clr hidden">
           <Form.Label column sm={6} className="mt-1 text-shadow">
@@ -173,10 +177,10 @@ export const AddTicketForm = () => {
           </Col>
         </Form.Group>
         <Form.Group as={Row}>
-          <Form.Label column sm={6} className="freedom-clr mt-2 text-shadow">
-            Date To Be Delivered
+          <Form.Label column sm={4} className="freedom-clr mt-2 text-shadow">
+            Date To Be <span className="text-red bold8">Delivered</span>
           </Form.Label>
-          <Col sm={6}>
+          <Col sm={4}>
             <Form.Control
               type="date"
               name="dateOrdered"
@@ -185,11 +189,11 @@ export const AddTicketForm = () => {
               onChange={handleOnChange}
               placeholder="Delivery Date"
               required
-              className="shado mt-2 bold4"
+              className="shado mt-2 bold8 ctr center freedom-clr"
             />
             <Form.Text className="center text-danger">
               {frmData.dateOrdered === new Date().toLocaleDateString() &&
-                "Date To Be Delivered is required"}
+                "'Date To Be Delivered' is required"}
             </Form.Text>
           </Col>
         </Form.Group>
@@ -230,11 +234,11 @@ export const AddTicketForm = () => {
               </select>
             </div>
             <Form.Text className="text-danger center">
-              {!frmData.orderedBy && "Orderer is required"}
+              {!frmData.orderedBy && "'Orderer' is required"}
             </Form.Text>
           </Col>
-          <Form.Label column sm={2}>
-            Pickup Office
+          <Form.Label column sm={2} className="freedom-clr text-shadow">
+            FT Pickup Office
           </Form.Label>
           <Col sm={4}>
             <div>
@@ -248,28 +252,28 @@ export const AddTicketForm = () => {
                 <option className="" value="ENTRY">
                   "NEW ENTRY"
                 </option>
-                <option value="Chest">CHESTERFIELD OFFICE</option>
-                <option value="Fentn">FENTON OFFICE</option>
-                <option value="Fest">FESTUS OFFICE</option>
-                <option value="Hazel">HAZELWOOD OFFICE</option>
-                <option value="Kirk">KIRKWOOD OFFICE</option>
-                <option value="Lstl">LAKE ST.LOUIS OFFICE</option>
-                <option value="Peter">ST.PETERS OFFICE</option>
-                <option value="Tele">TELEGRAPH OFFICE</option>
-                <option value="Wrigt">WRIGHT CITY OFFICE</option>
+                <option value="Chest">FT-CHESTERFIELD OFFICE</option>
+                <option value="Fentn">FT-FENTON OFFICE</option>
+                <option value="Fest">FT-FESTUS OFFICE</option>
+                <option value="Hazel">FT-HAZELWOOD OFFICE</option>
+                <option value="Kirk">FT-KIRKWOOD OFFICE</option>
+                <option value="Lstl">FT-LAKE ST.LOUIS OFFICE</option>
+                <option value="Peter">FT-ST.PETERS OFFICE</option>
+                <option value="Tele">FT-TELEGRAPH OFFICE</option>
+                <option value="Wrigt">FT-WRIGHT CITY OFFICE</option>
                 <option value=""></option>
                 <option value=""></option>
               </select>
             </div>
 
             <Form.Text className="text-danger center">
-              {!frmData.officeFrom && "Pickup Office is required"}
+              {!frmData.officeFrom && "'FT Pickup Office' is required"}
             </Form.Text>
           </Col>
         </Form.Group>
         <Form.Group as={Row} className="freedom-clr text-shadow ">
           <Form.Label column sm={2} className="freedom-clr text-shadow">
-            Recipient
+            Recipient's Name
           </Form.Label>
           <Col sm={4}>
             <Form.Control
@@ -277,23 +281,20 @@ export const AddTicketForm = () => {
               value={frmData.recipient}
               maxLength="20"
               onChange={handleOnChange}
-              placeholder="Recipient"
+              placeholder="Recipient's name"
               required
-              className="shado mt-1"
+              className="shado mt-1 center"
             />
             <Form.Text className="text-danger center">
-              {!frmData.recipient && "Recipient is required"}
+              {!frmData.recipient && "'Recipient' is required"}
             </Form.Text>
           </Col>
         </Form.Group>
 
         <Form.Group as={Row} className="freedom-clr ">
           <Form.Label column sm={8} className="mt-1 text-shadow">
-            Recipient Location{" "}
-            <span className="text-red font2x">
-              {" "}
-              ** Company, Office, or Building Name **
-            </span>
+            Recipient's <span className="text-red bold8">Company Name</span>
+            <span className="text-red font2x"></span>
           </Form.Label>
 
           <Col sm={4}>
@@ -308,25 +309,24 @@ export const AddTicketForm = () => {
                 <option className="" value="ENTRY">
                   "NEW ENTRY"
                 </option>
-                <option value="Chesterfield">CHESTERFIELD</option>
-                <option value="Chesterfield Office">CHESTERFIELD OFFICE</option>
-                <option value="Fenton Office">FENTON OFFICE</option>
-                <option value="Festus Office">FESTUS OFFICE</option>
-                <option value="Hazelwood Office">HAZELWOOD OFFICE</option>
-                <option value="Investors Title">INVESTORS TITLE</option>
+                <option value="FT-Chesterfield">FT-CHESTERFIELD OFFICE</option>
+                <option value="FT-Fenton">FT-FENTON OFFICE</option>
+                <option value="FT-Festus">FT-FESTUS OFFICE</option>
+                <option value="FT-Hazelwood">FT-HAZELWOOD OFFICE</option>
+
+                <option value="FT-Kirkwood">FT-KIRKWOOD OFFICE</option>
+                <option value="FT-Lake St.Louis">
+                  FT-LAKE ST.LOUIS OFFICE
+                </option>
+                <option value="FT-St. Peters">FT-ST. PETERS OFFICE</option>
+                <option value="FT-Telegraph">FT-TELEGRAPH OFFICE</option>
+                <option value="FT-Wright City">FT-WRIGHT CITY OFFICE</option>
+                <option value="Investors Title">Investors Title</option>
                 <option value="Keller Williams">Keller Williams</option>
                 <option value="Keller Williams Chesterfield">
                   Keller Williams Chesterfield
                 </option>
-                <option value="Keller Williams STL">Keller Williams STL</option>
-
-                <option value="Kirkwood Office">KIRKWOOD OFFICE</option>
-                <option value="Lake St.Louis Office">
-                  LAKE ST.LOUIS OFFICE
-                </option>
-                <option value="St. Peters Office">ST. PETERS OFFICE</option>
-                <option value="Telegraph Office">TELEGRAPH OFFICE</option>
-                <option value="Wright City Office">WRIGHT CITY OFFICE</option>
+                <option value="Keller Williams StL">Keller Williams StL</option>
               </select>
             </div>
 
@@ -335,18 +335,22 @@ export const AddTicketForm = () => {
               value={frmData.zipCode}
               maxLength="100"
               onChange={handleOnChange}
-              placeholder="Location"
+              placeholder="Company Name"
               required
-              className="shado border-2 mt-1"
+              className="shado border-2 mt-1 center label-soft"
             />
 
             <Form.Text className="text-danger center">
-              {!frmData.zipCode && "Location is required"}
+              {!frmData.zipCode && "'Company Name' is required"}
             </Form.Text>
           </Col>
         </Form.Group>
         <Form.Group as={Row} className="freedom-clr ">
-          <Form.Label column sm={4} className="freedom-clr text-shadow mt-1">
+          <Form.Label
+            column
+            sm={4}
+            className="text-grad bold7 text-shadow mt-1"
+          >
             Recipient Address**
           </Form.Label>
           <Col sm={8}>
@@ -376,7 +380,27 @@ export const AddTicketForm = () => {
                 <option value="4706 Hampton Ave., St. Louis mo 63109">
                   4706 Hampton Ave., St. Louis MO 63109
                 </option>
-                <option value=""></option>
+                <option value="Lake St.Louis to Chesterfield">
+                  Lake St.Louis to Chesterfield
+                </option>
+                <option value="St.Peters to Chesterfield">
+                  St.Peters to Chesterfield
+                </option>
+                <option value="Kirkwood to Chesterfield">
+                  Kirkwood to Chesterfield
+                </option>
+                <option value="Hazelwood to Chesterfield">
+                  Hazelwood to Chesterfield
+                </option>
+                <option value="Fenton to Chesterfield">
+                  Fenton to Chesterfield
+                </option>
+                <option value="Telegraph to Chesterfield">
+                  Telegraph to Chesterfield
+                </option>
+                <option value="Wright City to Chesterfield">
+                  Wright City to Chesterfield
+                </option>
               </select>
             </div>
             <Form.Control
@@ -386,10 +410,10 @@ export const AddTicketForm = () => {
               onChange={handleOnChange}
               placeholder="Address"
               required
-              className="shado mt-1"
+              className="shado mt-1 center label-soft"
             />
             <Form.Text className="text-danger center">
-              {!frmData.address && "Address is required"}
+              {!frmData.address && "'Address' is required"}
             </Form.Text>
           </Col>
         </Form.Group>
@@ -404,12 +428,13 @@ export const AddTicketForm = () => {
               value={frmData.fileNo}
               onChange={handleOnChange}
               placeholder="File No."
+              className="mt-1 label-soft"
             />
           </Col>
         </Form.Group>
         <Form.Group as={Row}>
           <Form.Label column sm={4} className="freedom-clr">
-            Contents of Package
+            Contents of 'Package'
           </Form.Label>
           <div className="center">
             {error && <Alert variant="danger">{error}</Alert>}
@@ -427,10 +452,10 @@ export const AddTicketForm = () => {
             onChange={handleOnChange}
             placeholder=" ..."
             required
-            className="shado ml-3 mr-3"
+            className="shado ml-3 mr-3 label-soft"
           />
           <Form.Text className="text-danger ml-3">
-            {!frmData.packageContents && "Contents of Package is required"}
+            {!frmData.packageContents && "'Contents of Package' is required"}
           </Form.Text>
         </Form.Group>
 

@@ -16,7 +16,7 @@ export const SearchForm = () => {
   return (
     <div>
       <Form>
-        <Form.Group as={Row}>
+        <Form.Group as={Row} className="ctr">
           <Col sm="9">
             <div>
               <select
@@ -39,12 +39,6 @@ export const SearchForm = () => {
                 <option value="Wrigt">Wrigt</option>
               </select>
             </div>
-            {/* <Form.Control
-              name="searchStr"
-              onChange={handleOnChange}
-              placeholder="From Office"
-              className="center"
-            /> */}
           </Col>
         </Form.Group>
       </Form>

@@ -51,7 +51,7 @@ tr:hover td:first-child {
   border-bottom: none !important;
 }
 
-tr:hover td:nth-child(6) {
+tr:hover td:last-child {
   border-top-right-radius: 5px !important;
   border-bottom-right-radius: 5px !important;
   border-bottom: none !important;
@@ -87,6 +87,16 @@ table th:nth-child(5) {
 }
 
 table th:nth-child(6) {
+  border-top: 1px solid rgba(0, 0, 128, 1) !important;
+  border-bottom: 2px solid rgba(0, 0, 128, 1) !important;
+}
+
+table th:nth-child(7) {
+  border-top: 1px solid rgba(0, 0, 128, 1) !important;
+  border-bottom: 2px solid rgba(0, 0, 128, 1) !important;
+}
+
+table th:nth-child(8) {
   border-top: 1px solid rgba(0, 0, 128, 1) !important;
   border-bottom: 2px solid rgba(0, 0, 128, 1) !important;
 }
@@ -137,6 +147,16 @@ td:nth-child(5) {
 }
 
 td:nth-child(6) {
+  border-right: none !important;
+  border-left: none !important;
+}
+
+td:nth-child(7) {
+  border-right: none !important;
+  border-left: none !important;
+}
+
+td:nth-child(8) {
   border-right: none !important;
   border-left: none !important;
 }

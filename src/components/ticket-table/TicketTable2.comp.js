@@ -6,7 +6,7 @@ import { TablePagination } from "@mui/material";
 
 export const TicketTable2 = ({ tickets }) => {
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(100);
+  const [rowsPerPage, setRowsPerPage] = useState(1000);
 
   const { searchTicketList, isLoading, error } = useSelector(
     (state) => state.tickets
@@ -39,6 +39,7 @@ export const TicketTable2 = ({ tickets }) => {
             <th className="">From</th>
 
             <th className="">To</th>
+            <th className="">Recipient</th>
             <th className="">Address</th>
             <th className="">Receiver</th>
             <th className="">Status</th>
@@ -100,7 +101,7 @@ export const TicketTable2 = ({ tickets }) => {
                   </td>
 
                   <td>{row.zipCode}</td>
-
+                  <td className="">{row.recipient}</td>
                   <td className="">{row.address}</td>
                   <td className="">{row.receiver}</td>
                   <td className="">
@@ -127,7 +128,7 @@ export const TicketTable2 = ({ tickets }) => {
       </Table>
       <div className="mt-paginate">
         <TablePagination
-          rowsPerPageOptions={[5, 25, 100, 250, 1000, 2000]}
+          rowsPerPageOptions={[5, 25, 50, 100, 250, 1000]}
           component="div"
           count={totalTickets}
           rowsPerPage={rowsPerPage}

@@ -214,7 +214,7 @@ input {
   font-weight: 600 !important;
   font-size: 1rem !important;
 
-  color: #000 !important;
+  /* color: #000 !important; */
   border-radius: 5px !important;
   margin-bottom: 0.3rem !important;
   background-color: transparent !important;
@@ -544,7 +544,17 @@ select:required {
   background-color: goldenrod !important;
 }
 
+.blk {
+  color: black !important;
+}
+
 .lft {
   float: left !important;
   padding-right: 10px;
 }
+
+.ctr {
+  justify-content: space-around !important;
+}
+
+
